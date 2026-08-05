@@ -23,34 +23,21 @@
       line-height: 1.65;
       font-size: 17px;
     }
-    .wrap {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px 20px 80px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    h1 {
-      font-size: 30px;
-      margin: 0 0 6px;
-      color: var(--accent);
-      letter-spacing: 0.5px;
-    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+    header { text-align: center; margin-bottom: 24px; }
+    h1 { font-size: 30px; margin: 0 0 6px; color: var(--accent); letter-spacing: 0.5px; }
     .subtitle { color: var(--muted); margin: 0; font-size: 15px; }
+    .nav {
+      display: flex; gap: 22px; justify-content: center;
+      margin: 16px 0 0; font-size: 15px;
+    }
+    .nav a { color: var(--muted); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; }
+    .nav a.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px 30px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
-    h2 {
-      font-size: 19px;
-      margin: 26px 0 8px;
-      color: var(--text);
-    }
+    h2 { font-size: 19px; margin: 26px 0 8px; color: var(--text); }
     h2:first-child { margin-top: 0; }
     p, li { color: var(--text); }
     ul { padding-left: 22px; margin: 8px 0; }
@@ -58,21 +45,11 @@
     a { color: var(--accent); }
     .muted { color: var(--muted); font-size: 14px; }
     .tag {
-      display: inline-block;
-      background: #e3f2fd;
-      color: var(--accent);
-      border-radius: 999px;
-      padding: 3px 12px;
-      font-size: 13px;
-      margin-top: 10px;
+      display: inline-block; background: #e3f2fd; color: var(--accent);
+      border-radius: 999px; padding: 3px 12px; font-size: 13px; margin-top: 10px;
     }
     .updated { color: var(--muted); font-size: 14px; margin-top: 4px; }
-    footer {
-      margin-top: 28px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
+    footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 14px; }
   </style>
 </head>
 <body>
@@ -80,6 +57,10 @@
     <header>
       <h1>Sudoku</h1>
       <p class="subtitle">Gizlilik Politikası</p>
+      <nav class="nav">
+        <a class="active" href="./">Gizlilik Politikası</a>
+        <a href="terms.html">Kullanım Koşulları</a>
+      </nav>
       <span class="tag">Uygulama Kimliği: com.fatal35.sudoku</span>
       <p class="updated">Son güncelleme: 5 Ağustos 2026</p>
     </header>
@@ -129,7 +110,7 @@
     </main>
 
     <footer>
-      © 2026 Sudoku · com.fatal35.sudoku
+      © 2026 Sudoku · com.fatal35.sudoku · <a href="terms.html">Kullanım Koşulları</a>
     </footer>
   </div>
 </body>
